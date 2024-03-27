@@ -1,3 +1,20 @@
+!---------------------------------------------------------------------------------------------------
+! OPD_chirality_index: a program to calculate the Osipov-Pickup-Dunmur chirality index                                                  
+!---------------------------------------------------------------------------------------------------
+!
+!   This file was written by Felippe M. Colombari 
+!
+!---------------------------------------------------------------------------------------------------
+!> @file   osipov_omp.f90
+!> @author Felippe M. Colombari
+!> @brief  This file contains modules and functions to perform all calculations
+!> @date - May, 2018                                                           
+!> - first version was written                                                
+!> @date - Nov 2022
+!> - OpenMP parallelization was implemented
+!---------------------------------------------------------------------------------------------------
+
+
 module products
 
   implicit none
@@ -46,7 +63,7 @@ program osipov
   real(kind=dp)                             :: denominator, G0, G
   real(kind=dp)                             :: rij, rjk, rkl, rik
   real(kind=dp)                             :: dot_one, dot_two, dot_three
-  real(kind=dp), dimension(3)               :: vij, vjk, vkl, vik, vcross!, final_cross, unity, delta
+  real(kind=dp), dimension(3)               :: vij, vjk, vkl, vik, vcross
   real(kind=dp), allocatable, dimension(:)  :: x, y, z
 
 
