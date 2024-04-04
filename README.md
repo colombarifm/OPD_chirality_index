@@ -1,15 +1,12 @@
-<img src="https://github.com/colombarifm/OPD_chirality_index/blob/main/biphenyl_test/OPD_biphenyl.png" width="75%" height="75%">
+<img src="https://github.com/colombarifm/opd_chirality_index/blob/main/biphenyl_test/OPD_biphenyl.png" width="75%" height="75%">
 
 <br />
 
 This is a software written for the calculation of the scaled Osipov-Pickup-Dunmur
-chirality index, as reported on Solymosi et al. 2002.
-
-It reads a simple .xyz coordinate file and returns both scaled (G0,s) and unscaled
-(G0) values.
-
-This is a free software written in Fortran 2003 language, being available at
-https://github.com/colombarifm/OPD_chirality_index under the GPLv3+ License. 
+chirality index, as reported on Solymosi et al. 2002. It reads a simple .xyz coordinate 
+file and returns both scaled (G0,s) and unscaled (G0) values. This is a free software 
+written in Fortran 2003 language, being available at 
+https://github.com/colombarifm/opd_chirality_index under the GPLv3+ License. 
 It was developed and tested under Linux environment with gfortran 7.5+ compilers.  
 
 # Install
