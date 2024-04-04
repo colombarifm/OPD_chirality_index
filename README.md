@@ -2,6 +2,20 @@ This is a software written for the calculation of the scaled Osipov-Pickup-Dunmu
 chirality index, as reported on Solymosi et al. 2002. It reads a simple .xyz coordinate 
 file and returns both scaled (G0,s) and unscaled (G0) values. 
 
+# Usage
+
+The software runs via the follow command
+
+```bash
+./opd --input <file.xyz>
+```
+
+It can also run in parallel by setting the threads for OpenMP
+
+```bash
+export OMP_NUM_THREADS=<ncores>
+```
+
 As an example, OPD calculations were performed along biphenyl torsional profile 
 (structures obtained at the GFN2-xTB level), as shown below:
 
