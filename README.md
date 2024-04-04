@@ -1,9 +1,9 @@
-<img src="https://github.com/colombarifm/OPD_chirality_index/tree/main/biphenyl_test/OPD_biphenyl.png" width="75%" height="75%">
+<img src="https://github.com/colombarifm/OPD_chirality_index/blob/main/biphenyl_test/OPD_biphenyl.png" width="75%" height="75%">
 
 <br />
 
 This is a software written for the calculation of the scaled Osipov-Pickup-Dunmur
-chirality index, as reported on:
+chirality index, as reported on Solymosi et al. 2002.
 
 It reads a simple .xyz coordinate file and returns both scaled (G0,s) and unscaled
 (G0) values.
