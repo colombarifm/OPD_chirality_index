@@ -19,7 +19,7 @@ It can also run in parallel by setting the threads for OpenMP
 export OMP_NUM_THREADS=<ncores>
 ```
 
-As an example, the reduced Osipov chirality index (G0,s, as reported on Solymosi et al. 2002)
+As an example, the scaled Osipov chirality index (G0,s, as reported on Solymosi et al. 2002)
 calculation was performed for multiple biphenyl conformations along its torsional profile 
 (structures obtained at the GFN2-xTB level), as shown below:
 
