@@ -1,0 +1,5 @@
+! xtb2 TightOpt VeryTightSCF
+% geom Scan
+  D 0 1 6 11 = 0, 180, 37 end
+end
+*xyzfile 0 1 biphenyl.xyz
