@@ -18,8 +18,13 @@ See [installation instructions](./INSTALL.md)
 
 # Links for useful articles
 
-* [CENTER_OF_MASS](https://github.com/colombarifm/center_of_mass) program to calculate the center of mass of molecular structures
-* [SAS_GRID](https://github.com/colombarifm/sas_grid) program to generate the solvent accessible surface translation grid for molecular structures
+
+* [Osipov (1995)](https://doi.org/10.1080/00268979500100831) M. A. Osipov, B. T. Pickup, D. A. Dunmur. *A new twist to molecular chirality: intrinsic chirality indices*. Mol. Phys., 84, 1193-1206 **(1995)**
+
+* [Solymosi (2002)](https://doi.org/10.1063/1.1476321) M. Solymosi, R. J. Low, M. Grayson, M. P. Neal. *A generalized scaling of a chiral index for molecules*. J. Chem. Phys., 116, 9875-9881 **(2002)**
+
+* [Hattne (2011)](https://doi.org/10.1098/rsif.2010.0297) J. Hattne, V. S. Lamzin. *A moment invariant for evaluating the chirality of three-dimensional objects*. L. R. Soc. Interface, 8, 144–151 **(2011)**
+
 
 # Directory organization
 
