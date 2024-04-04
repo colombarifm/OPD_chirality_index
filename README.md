@@ -1,10 +1,13 @@
-This is a software written for the calculation of the scaled Osipov-Pickup-Dunmur
-chirality index, as reported on Solymosi et al. 2002. It reads a simple .xyz coordinate 
-file and returns both scaled (G0,s) and unscaled (G0) values. 
+# *opd* program for the calculation of the scaled Osipov-Pickup-Dunmur chirality index
 
-# Usage
+## Install
 
-The software runs via the follow command
+See [installation instructions](./INSTALL.md)  
+
+
+## Usage
+
+It reads a simple .xyz coordinate file and returns both scaled (G0,s) and unscaled (G0) values
 
 ```bash
 ./opd --input <file.xyz>
@@ -16,8 +19,10 @@ It can also run in parallel by setting the threads for OpenMP
 export OMP_NUM_THREADS=<ncores>
 ```
 
-As an example, OPD calculations were performed along biphenyl torsional profile 
+As an example, the reduced Osipov chirality index (G0,s, as reported on Solymosi et al. 2002)
+calculation was performed for multiple biphenyl conformations along its torsional profile 
 (structures obtained at the GFN2-xTB level), as shown below:
+
 
 <img src="https://github.com/colombarifm/opd_chirality_index/blob/main/biphenyl_test/OPD_biphenyl.png" width="75%" height="75%">
 
@@ -27,12 +32,7 @@ This is a free software written in Fortran 2003 language, being available at
 https://github.com/colombarifm/opd_chirality_index under the GPLv3+ License. 
 It was developed and tested under Linux environment with gfortran 7.5+ compilers.  
 
-# Install
-
-See [installation instructions](./INSTALL.md)  
-
-# Links for useful articles
-
+## Links for useful articles
 
 * [Osipov (1995)](https://doi.org/10.1080/00268979500100831) M. A. Osipov, B. T. Pickup, D. A. Dunmur. *A new twist to molecular chirality: intrinsic chirality indices*. Mol. Phys., 84, 1193-1206 **(1995)**
 
@@ -41,7 +41,7 @@ See [installation instructions](./INSTALL.md)
 * [Hattne (2011)](https://doi.org/10.1098/rsif.2010.0297) J. Hattne, V. S. Lamzin. *A moment invariant for evaluating the chirality of three-dimensional objects*. L. R. Soc. Interface, 8, 144–151 **(2011)**
 
 
-# Directory organization
+## Directory organization
 
 * [`src`](./src): The source code
 * [`biphenyl_test`](./biphenyl_test): Input files for the calculation of the torsional profile of biphenyl
