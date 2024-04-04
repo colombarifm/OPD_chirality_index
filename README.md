@@ -1,4 +1,4 @@
-<img src="https://github.com/colombarifm/themis/blob/master/biphenyl_test/OPD_biphenyl.png" width="75%" height="75%">
+<img src="https://github.com/colombarifm/OPD_chirality_index/tree/main/biphenyl_test/OPD_biphenyl.png" width="75%" height="75%">
 
 <br />
 
