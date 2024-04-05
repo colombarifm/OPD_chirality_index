@@ -10,7 +10,7 @@ See [installation instructions](./INSTALL.md)
 It reads a simple .xyz coordinate file and returns both scaled (G0,s) and unscaled (G0) values
 
 ```bash
-./opd --input <file.xyz>
+./opd --input <file.xyz>  > output.log
 ```
 
 It can also run in parallel by setting the threads for OpenMP
@@ -32,7 +32,7 @@ This is a free software written in Fortran 2003 language, being available at
 https://github.com/colombarifm/opd_chirality_index under the GPLv3+ License. 
 It was developed and tested under Linux environment with gfortran 7.5+ compilers.  
 
-## Links for useful articles
+## Links for important articles
 
 * [Osipov (1995)](https://doi.org/10.1080/00268979500100831) M. A. Osipov, B. T. Pickup, D. A. Dunmur. *A new twist to molecular chirality: intrinsic chirality indices*. Mol. Phys., 84, 1193-1206 **(1995)**
 
