@@ -24,7 +24,7 @@ calculation was performed for multiple biphenyl conformations along its torsiona
 (structures obtained at the GFN2-xTB level), as shown below:
 
 
-<img src="https://github.com/colombarifm/opd_chirality_index/blob/main/biphenyl_test/OPD_biphenyl.png" width="75%" height="75%">
+<img src="https://github.com/colombarifm/opd_chirality_index/blob/main/biphenyl_test/OPD_biphenyl.png" width="95%" height="95%">
 
 <br />
 
