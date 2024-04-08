@@ -1,5 +1,10 @@
 # *opd* program for the calculation of the scaled Osipov-Pickup-Dunmur chirality index
 
+This is a very simple implementation of the scaled Osipov-Pickup-Dunmur chirality
+index calculation. This is a free software written in Fortran 2003 language, being 
+available at https://github.com/colombarifm/opd_chirality_index under the GPLv3+ License. 
+It was developed and tested under Linux environment with gfortran 7.5+ compilers.  
+
 ## Install
 
 See [installation instructions](./INSTALL.md)  
@@ -19,18 +24,13 @@ It can also run in parallel by setting the threads for OpenMP
 export OMP_NUM_THREADS=<ncores>
 ```
 
-As an example, the scaled Osipov chirality index (G0,s, as reported on Solymosi et al. 2002)
+As an example, the scaled Osipov chirality index (G0s, as reported on Solymosi et al. 2002)
 calculation was performed for multiple biphenyl conformations along its torsional profile 
 (structures obtained at the GFN2-xTB level), as shown below:
-
 
 <img src="https://github.com/colombarifm/opd_chirality_index/blob/main/biphenyl_test/OPD_biphenyl.png" width="95%" height="95%">
 
 <br />
-
-This is a free software written in Fortran 2003 language, being available at 
-https://github.com/colombarifm/opd_chirality_index under the GPLv3+ License. 
-It was developed and tested under Linux environment with gfortran 7.5+ compilers.  
 
 ## Links for important articles
 
