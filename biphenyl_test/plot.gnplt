@@ -1,0 +1,22 @@
+set terminal wxt size 800,300
+
+set border lw 2
+
+set xlabel "biphenyl torsion angle (deg)"
+set ylabel "G0s x 10⁻²"
+
+set xrange [-5:185]
+set xtics 30
+
+set yrange [-1:1]
+set ytics 0.2
+set ytics format "%3.1f"
+
+set tics scale 0
+set grid lw 1.5
+
+plot "opd_scan.log" u ($1):($2*100) w lp pt 4 lw 2 lc rgb "black" notitle
+
+set terminal pngcairo size 800,300 enhanced font 'Verdana,11'
+set output "OPD_biphenyl.png"
+replot
