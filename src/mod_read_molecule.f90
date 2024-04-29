@@ -87,7 +87,7 @@ contains
 
     if ( allocated ( this % atoms ) ) deallocate ( this % atoms )
     allocate( this % atoms( this % num_atoms ), stat=ierr )
-    if(ierr/=0) call err % error('e',message="abnormal memory allocation")
+    if(ierr/=0) call err % error('e', err_message="abnormal memory allocation")
 
     do i = 1, this % num_atoms
 

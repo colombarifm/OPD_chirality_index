@@ -37,9 +37,9 @@ module mod_error_handling
   private
 
   type, public :: error
-    integer                       :: code
-    character                     :: type
-    character(len=:), allocatable :: message, check, tip
+    integer                       :: err_code
+    character                     :: err_type
+    character(len=:), allocatable :: err_message, err_check, err_tip
   contains
     procedure                     :: error       => raise_error
     procedure                     :: termination => normal_termination
@@ -49,39 +49,39 @@ module mod_error_handling
 
 contains
 
-  subroutine Raise_error(self, type, code, message, check, tip)
+  subroutine Raise_error(self, err_type, err_code, err_message, err_check, err_tip)
     class(error), intent(inout)                 :: self
-    character, intent(in)                       :: type        
-    integer, optional, intent(in)               :: code        
-    character( len = * ), optional, intent(in)  :: message, check, tip
+    character, intent(in)                       :: err_type        
+    integer, optional, intent(in)               :: err_code        
+    character( len = * ), optional, intent(in)  :: err_message, err_check, err_tip
 
-    self % type = type
+    self % err_type = err_type
 
-    if (present( message )) self % message = message
-    if (present( check ))   self % check   = check
-    if (present( tip ))     self % tip     = tip
-    if (present( code ))    self % code    = code
+    if (present( err_message )) self % err_message = err_message
+    if (present( err_check ))   self % err_check   = err_check
+    if (present( err_tip ))     self % err_tip     = err_tip
+    if (present( err_code ))    self % err_code    = err_code
 
-    select case(type)
+    select case(err_type)
       case('w')
-        if (present( message )) write(output_unit,'(/,T5,"Warning: ",a)') self % message
-        if (present( check ))   write(output_unit,'(/,T5,"Warning: ",a)') self % check
-        if (present( tip ))     write(output_unit,'(/,T5,"Warning: ",a)') self % tip
-        if (present( code ))    write(output_unit,'("Code: ",i0)')        self % code
+        if (present( err_message )) write(output_unit,'(/,T5,"Warning: ",a)') self % err_message
+        if (present( err_check ))   write(output_unit,'(/,T5,"Warning: ",a)') self % err_check
+        if (present( err_tip ))     write(output_unit,'(/,T5,"Warning: ",a)') self % err_tip
+        if (present( err_code ))    write(output_unit,'("Code: ",i0)')        self % err_code
       case('e')
-        if (present( message )) write(output_unit,'(/,T5,"Error: abnormal condition ",a)') self % message
-        if (present( check ))   write(output_unit,'(/,T5,"Please check ",a)')              self % check
-        if (present( tip ))     write(output_unit,'(/,T5,"TIP: ",a)')                      self % tip
-        if (present( code ))    write(output_unit,'("Code: ",i0)')                         self % code
+        if (present( err_message )) write(output_unit,'(/,T5,"Error: abnormal condition ",a)') self % err_message
+        if (present( err_check ))   write(output_unit,'(/,T5,"Please check ",a)')              self % err_check
+        if (present( err_tip ))     write(output_unit,'(/,T5,"TIP: ",a)')                      self % err_tip
+        if (present( err_code ))    write(output_unit,'("Code: ",i0)')                         self % err_code
     end select
 
-    if ( allocated( self % message ) ) deallocate( self % message )
-    if ( allocated( self % check ) ) deallocate( self % check )
-    if ( allocated( self % tip ) ) deallocate( self % tip )
+    if ( allocated( self % err_message ) ) deallocate( self % err_message )
+    if ( allocated( self % err_check ) )   deallocate( self % err_check )
+    if ( allocated( self % err_tip ) )     deallocate( self % err_tip )
 
   end subroutine Raise_error   
 
-  subroutine Normal_termination(self,iostat,status)
+  subroutine Normal_termination(self, iostat, status)
     class(error), intent(INOUT)         :: self
     integer, intent(IN)                 :: iostat
     character( len = * ), intent(IN)    :: status

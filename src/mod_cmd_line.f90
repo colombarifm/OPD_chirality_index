@@ -71,7 +71,7 @@ contains
       ! to avoid allocation errors if one forget the argument "input"
 
       allocate( arg(narg+1), stat=ierr )
-      if(ierr/=0) call err % error('e',message="abnormal memory allocation")
+      if(ierr/=0) call err % error('e', err_message="abnormal memory allocation")
 
       arg = char(0)
 
@@ -103,9 +103,9 @@ contains
 
               if ( nochar > 0 ) then
 
-                call err % error('e',message="while reading command line.")
-                call err % error('e',check="molecule coordinate file.") 
-                call err % error('e',tip="Should be a valid .xyz file.")
+                call err % error('e', err_message="while reading command line.")
+                call err % error('e', err_check="molecule coordinate file.") 
+                call err % error('e', err_tip="Should be a valid .xyz file.")
                
                 stop
                 
@@ -115,9 +115,9 @@ contains
 
                 if ( ios > 0 ) then
 
-                  call err % error('e',message="while reading command line.")
-                  call err % error('e',check="molecule coordinate file.") 
-                  call err % error('e',tip="Should be a valid .xyz file.")
+                  call err % error('e', err_message="while reading command line.")
+                  call err % error('e', err_check="molecule coordinate file.") 
+                  call err % error('e', err_tip="Should be a valid .xyz file.")
                
                   stop
 
@@ -127,8 +127,8 @@ contains
 
             CASE DEFAULT
 
-              call err % error('e',message="while reading command line.")
-              call err % error('e',check="invalid command line flag '"//trim(adjustl(arg(i)))//"'.")
+              call err % error('e', err_message="while reading command line.")
+              call err % error('e', err_check="invalid command line flag '"//trim(adjustl(arg(i)))//"'.")
                
               stop
 
@@ -138,8 +138,8 @@ contains
 
           if ( arg(1)(1:2) /= '--' ) then
 
-            call err % error('e',message="while reading command line.")
-            call err % error('e',check="'"//trim(adjustl(arg(i+1)))//"' argument of '"//trim(adjustl(arg(i)))//"' flag.")
+            call err % error('e', err_message="while reading command line.")
+            call err % error('e', err_check="'"//trim(adjustl(arg(i+1)))//"' argument of '"//trim(adjustl(arg(i)))//"' flag.")
 
             stop
 
@@ -147,8 +147,8 @@ contains
 
           if ( ( i > 1 ) .and. ( arg(i-1)(1:2) ) /= '--' ) then
 
-            call err % error('e',message="while reading command line.")
-            call err % error('e',check="'"//trim(adjustl(arg(i+1)))//"' argument of '"//trim(adjustl(arg(i)))//"' flag.")
+            call err % error('e', err_message="while reading command line.")
+            call err % error('e', err_check="'"//trim(adjustl(arg(i+1)))//"' argument of '"//trim(adjustl(arg(i)))//"' flag.")
 
             stop
 
@@ -162,8 +162,8 @@ contains
 
     else if ( narg == 0 ) then 
 
-      call err % error('e',message="while reading command line.")
-      call err % error('e',tip="Command line arguments are missing.")
+      call err % error('e', err_message="while reading command line.")
+      call err % error('e', err_tip="Command line arguments are missing.")
 
       stop
 
@@ -171,9 +171,9 @@ contains
 
     if ( filename == char(0) ) then
 
-      call err % error('e',message="while reading command line.")
-      call err % error('e',check="molecule coordinate file.") 
-      call err % error('e',tip="Should be a valid .xyz file.")
+      call err % error('e', err_message="while reading command line.")
+      call err % error('e', err_check="molecule coordinate file.") 
+      call err % error('e', err_tip="Should be a valid .xyz file.")
 
       stop
 

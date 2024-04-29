@@ -59,8 +59,8 @@ contains
 
       else
 
-        call err % error('e',message="while reading file: "//trim(file_name))
-        call err % error('e',check="if file exists in this directory.")
+        call err % error('e', err_message="while reading file: "//trim(file_name))
+        call err % error('e', err_check="if file exists in this directory.")
 
         stop
 
@@ -68,7 +68,7 @@ contains
 
     else
 
-      call err % error('e',message="while reading file: "//trim(file_name))
+      call err % error('e', err_message="while reading file: "//trim(file_name))
       
       stop
 
